@@ -365,9 +365,9 @@ classdef curvedBeam < handle
         % Created: 2017-03-27
             
             fprintf('[INFO] Loading energy equations\n');
-            solver.funct.load.x = load('deflectX-180deg.mat');
-            solver.funct.load.y = load('deflectY-180deg.mat');
-            solver.funct.load.z = load('deflectZ-180deg.mat');
+            solver.funct.load.x = load('data/deflectX-180deg.mat');
+            solver.funct.load.y = load('data/deflectY-180deg.mat');
+            solver.funct.load.z = load('data/deflectZ-180deg.mat');
             
         end
         
@@ -377,7 +377,7 @@ classdef curvedBeam < handle
         % Created: 2017-03-27
             
             fprintf('[INFO] Loading reaction equations\n');
-            reactions = load('reactionForces-Gendeg.mat');
+            reactions = load('data/reactionForces-Gendeg.mat');
             syms Px Py Pz T a E I G J R;
             
             fprintf('[INFO] Solving reaction equation 1/6\n');
